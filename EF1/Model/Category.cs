@@ -20,6 +20,9 @@ namespace EF1.Model
         [Column(TypeName ="ntext")]
         public string Description { get; set; }
         //collect navigation
-        public virtual List<Product> product { get; set; }
+        public virtual List<Product> products { get; set; }
+        public virtual CategoryDetails categoryDetails { get; set; }
+    
+    
     }
 }

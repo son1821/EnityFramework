@@ -11,7 +11,7 @@ namespace EF1.Model
     {
         
         
-        [Key]
+        //[Key]
         public int ProductId {  get; set; }
 
         
@@ -28,13 +28,13 @@ namespace EF1.Model
         
         //Reference Navigation
         //Tao ra foreign key
-        [ForeignKey("CateId")]
+        //[ForeignKey("CateId")]
         
         
         public virtual Category Category { get; set; }
         public int? CateId2 { get; set; }
-        [ForeignKey("CateId2")]
-        [InverseProperty("product")]
+        //[ForeignKey("CateId2")]
+        //[InverseProperty("products")]
         public virtual Category Category2 { get; set; }
         public void PrinProduct()
         {
@@ -45,7 +45,7 @@ namespace EF1.Model
     }
 }
 /*
- [Table("TableName") - Chi ra model tuong ung table tren database
+ [Table("TableName")] - Chi ra model tuong ung table tren database
 [Key] -> Primary Key
 [Required] -> Not null
 [StringLenght(50)] -> do dai 
